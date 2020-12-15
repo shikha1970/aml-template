@@ -18,7 +18,7 @@ def init():
     global inputs_dc, prediction_dc
     # The AZUREML_MODEL_DIR environment variable indicates
     # a directory containing the model file you registered.
-    model_path = Model.get_model_path(model_name="mymodel")
+    model_path = Model.get_model_path(model_name="aml-template-merge")
     model = joblib.load(model_path)
     inputs_dc = ModelDataCollector("sample-model", designation="inputs", feature_names=["feat1", "feat2", "feat3", "feat4"])
     prediction_dc = ModelDataCollector("sample-model", designation="predictions", feature_names=["prediction"])
